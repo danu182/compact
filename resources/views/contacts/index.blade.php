@@ -21,7 +21,7 @@
                         <input type="text" name="search" class="border border-gray-300 shadow  rounded p-3" placeholder="Cari data..." value="{{ request('search') }}">
                     </form>
                     <a href="{{ route('contacts.create') }}"
-                    class="px-4 py-3 bg-red-800  my-2 ring-indigo-300 border  text-white">Create
+                    class="px-4 py-3 bg-blue-700  my-2 ring-indigo-300 border  text-white">Create
                         Contact</a>
                 </div>
                 <table class="table-auto w-full">
