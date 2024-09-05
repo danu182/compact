@@ -21,16 +21,22 @@ class PesertaController extends Controller
 
     public function proses(Request $request )
     {
-        // return $request->all();
+        // return view('vclaim.peserta.hasil');
+
         $parameter1=$request->nomor;
         $parameter2= formatDate($request->tanggal1);
+        $nilai=$request->nilai;
 
-        $alamat="Peserta/nokartu/".$parameter1."/tglSEP/".$parameter2;
-        
-        // url($alamat);
+        if($nilai==0){
+            $alamat="Peserta/nokartu/".$parameter1."/tglSEP/".$parameter2;
+        }else{
+            $alamat="Peserta/nik/".$parameter1."/tglSEP/".$parameter2;
+        }
+
         list($peserta, $hsl)= vClaim($alamat);
         if($hsl['metaData']['code']=='200'){
-                return $peserta;
+                // return $peserta;
+                return view('vclaim.peserta.hasil', compact('peserta'));
         }else{
             return Redirect()->back()->withErrors(
                                 [

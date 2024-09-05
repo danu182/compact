@@ -42,6 +42,29 @@
                     @csrf
                     
 
+                    {{-- asdasdas --}}
+                    
+                    
+                     <div class="relative h-10 w-72 min-w-[200px]">
+                        <label class="block mb-1 text-sm text-slate-800">
+                            Your Country
+                        </label>
+                        <div class="relative">
+                            <select name="nilai"
+                                class="w-full h-10 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                                <option value="0">Nomor</option>
+                                <option value="1">NIK</option>
+                            </select>
+                        </div>
+                       
+                        </div>
+
+                    
+                    {{-- asdasdas --}}
+
+                    
+
+
                    
                     <div>
                         <x-input-label for="nomor" :value="__('Nomor')"/>
