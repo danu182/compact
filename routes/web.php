@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RujukanMultiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('peserta', [PesertaController::class,'index'])->name('peserta.index');
     Route::post('peserta/proses', [PesertaController::class,'proses'])->name('peserta.proses');
+    
+    Route::get('rujukan/multi', [RujukanMultiController::class,'index'])->name('rujukan.multi.index');
+    Route::post('rujukan/multi/proses', [RujukanMultiController::class,'proses'])->name('rujukan.multi.proses');
     
 
 });

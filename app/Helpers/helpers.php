@@ -57,7 +57,8 @@ function vClaim($alamat)
             $hasil =Http::withHeaders(
                 $headers
             )->get($url);
-                $mama=$hasil["response"];
+                
+            $mama=$hasil["response"];
                 $encrypt_method = 'AES-256-CBC';
                 $key= $consid.$secretKey.$tStamp;
                 $key_hash = hex2bin(hash('sha256', $key));
