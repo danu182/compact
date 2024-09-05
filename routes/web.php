@@ -31,8 +31,8 @@ Route::middleware('auth')->group(function () {
     
     Route::resource('contacts', ContactController::class);
 
-    Route::get('peserta', [PesertaController::class,'index'])->name('peserta');
-    Route::get('peserta/proses', [PesertaController::class,'index'])->name('peserta-proses');
+    Route::get('peserta', [PesertaController::class,'index'])->name('peserta.index');
+    Route::post('peserta/proses', [PesertaController::class,'proses'])->name('peserta.proses');
     
 
 });

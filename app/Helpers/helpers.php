@@ -5,6 +5,8 @@ namespace App\Helpers;
 use DateTime;
 use Illuminate\Support\Facades\Http;
 
+use function PHPUnit\Framework\returnSelf;
+
 function formatDate($dateString, $format = 'Y-m-d')
 {
     $date = new DateTime($dateString);
@@ -32,7 +34,8 @@ function headersVclaim()
         return $headers;
 }
 
-function olah()
+
+function vClaim($alamat)
 {
     try{
         $consid = env('consid');
@@ -50,6 +53,7 @@ function olah()
             'user_key'=>$user_key,  
         ];
    
+            $url= env('baseurl').$alamat;
             $hasil =Http::withHeaders(
                 $headers
             )->get($url);

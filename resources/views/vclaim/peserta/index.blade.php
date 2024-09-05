@@ -6,6 +6,28 @@
         </h2>
     </x-slot>
 
+    @if(session('pesan_sukses'))
+    <div class="alert alert-success">
+        {{ session('pesan_sukses') }}
+    </div>
+    @endif
+
+    @if($errors->any())
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">    
+            <div class="p-4 sm:p-8 bg-red-400 shadow sm:rounded-lg">
+
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                </div>
+            </div>
+    </div>
+    
+    @endif
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
@@ -16,9 +38,11 @@
                 <p class="mt-1 text-sm text-gray-600">
                     {{ __('masukkan tanggal dan nomer peserta.') }}
                 </p>
-                <form method="post" enctype="multipart/form-data" action="{{ route('contacts.store') }}" class="mt-6 space-y-6">
+                <form method="post" enctype="multipart/form-data" action="{{ route('peserta.proses') }}" class="mt-6 space-y-6">
                     @csrf
                     
+
+                   
                     <div>
                         <x-input-label for="nomor" :value="__('Nomor')"/>
                         <x-text-input id="nomor" name="nomor" type="text"
