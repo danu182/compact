@@ -23,7 +23,7 @@ class RujukanMultiController extends Controller
         // return $hasil;
         if($hasil['metaData']['code']=='200'){
                 return $peserta;
-                return view('vclaim.rujukan_multi.hasil', compact('peserta'));
+                // return view('vclaim.rujukan_multi.hasil', compact('peserta'));
         }else{
             return Redirect()->back()->withErrors(
                                 [
@@ -38,5 +38,6 @@ class RujukanMultiController extends Controller
 
         }
     }
+    
 
 }

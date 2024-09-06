@@ -5,6 +5,7 @@ use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RujukanMultiController;
+use App\Http\Controllers\RujukanSingleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('rujukan/multi', [RujukanMultiController::class,'index'])->name('rujukan.multi.index');
     Route::post('rujukan/multi/proses', [RujukanMultiController::class,'proses'])->name('rujukan.multi.proses');
+    
+    Route::get('rujukan/single', [RujukanSingleController::class,'index'])->name('rujukan.multi.index');
+    Route::post('rujukan/single/proses', [RujukanSingleController::class,'proses'])->name('rujukan.multi.proses');
     
 
 });
