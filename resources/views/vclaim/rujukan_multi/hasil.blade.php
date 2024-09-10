@@ -10,11 +10,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __('Contact List') }}
+                    {{ __('Rujukan multi List') }}
                 </h2>
 
                 <p class="mt-1 mb-2 text-sm text-gray-600">
-                    {{ __('Here is your contact list.') }}
+                    {{ __('Here is your rujukan list.') }}
                 </p>
                 <div class="flex justify-between items-center">
                     <form action="" method="get">
@@ -32,223 +32,129 @@
                         <tr>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
-                                noKartu
+                                No
                             </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
-                                nik
+                                Nomer Rujukan
                             </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
-                                nama
+                                No kartu
                             </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">sex</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                Nik
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">noMR</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                Nama
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">noTelepon</p>
-                            </th>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">tglLahir</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                kdProvider
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">statusPeserta-keterangan</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                Nama Provider
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">provUmum-kdProvider</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                umur pelayanan
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">provUmum-nmProvider</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                diagnosa
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">jenisPeserta-keterangan</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                poli rujukan
+                            </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">hakKelas-keterangan</p>
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                tgl kunjungan
+                            </p>
                             </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">umurSekarang</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">umurSaatPelayanan</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">informasi-dinsos</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">informasi-noSKTM</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">informasi-eSEP</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">informasi-prolanisPRB</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">cob->noAsuransi</p>
-                            </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">cob->nmAsuransi</p>
-                            </th>
+                            
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="hover:bg-slate-50">
-                            <td class="p-4 border-b border-slate-200">
-                            <p class="block text-sm text-slate-800">
-                                {{ $peserta['peserta']['noKartu'] }}
-                            </p>
-                            </td>
-                            <td class="p-4 border-b border-slate-200">
-                            <p class="block text-sm text-slate-800">
-                                {{ $peserta['peserta']['nik'] }}
-                            </p>
-                            </td>
-                            <td class="p-4 border-b border-slate-200">
-                            <p class="block text-sm text-slate-800">
-                                {{ $peserta['peserta']['nama'] }}
-                            </p>
-                            </td>
-                            <td class="p-4 border-b border-slate-200">
-                            <p class="block text-sm text-slate-800">
-                                @if ($peserta['peserta']['sex']=="P")
-                                    Perempuan
-                                @else
-                                    Laki-laki
-                                @endif
-                            </p>
-                            </td>
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['mr']['noMR'] }}
-                            </a>
-                            </td>
                             
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['mr']['noTelepon'] }}
-                            </a>
-                            </td>
+                            @foreach ($dataPasien as $pasien)
+                            <tr class="hover:bg-slate-50">
+                            
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $loop->iteration }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['noKunjungan'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['noKartu'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['nik'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['nama'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['diagnosa']['nama'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['provUmum']['kdProvider'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['provUmum']['nmProvider'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['umur']['umurSaatPelayanan'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['poliRujukan']['nama'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ date('d M Y', strtotime($pasien['tglKunjungan'])) }} 
+                                </p>
+                                </td>
 
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['tglLahir'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['statusPeserta']['keterangan'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['provUmum']['kdProvider'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['provUmum']['nmProvider'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['jenisPeserta']['keterangan'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['hakKelas']['keterangan'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['umur']['umurSekarang'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['umur']['umurSaatPelayanan'] }}
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               {{ $peserta['peserta']['informasi']['dinsos'] }}
-                               @if ($peserta['peserta']['informasi']['dinsos'] == null)
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['informasi']['dinsos'] }}
-                               @endif
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                                @if ($peserta['peserta']['informasi']['prolanisPRB']== null)
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['informasi']['prolanisPRB'] }}
-                               @endif
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               @if ($peserta['peserta']['informasi']['noSKTM']==null)
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['informasi']['noSKTM'] }}
-                               @endif
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               @if ($peserta['peserta']['informasi']['eSEP']== null )
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['informasi']['eSEP'] }}
-                               @endif
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-
-                               @if ($peserta['peserta']['cob']['noAsuransi'] == null)
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['cob']['noAsuransi']  }}
-                               @endif
-                            </a>
-                            </td>
-
-                            <td class="p-4 border-b border-slate-200">
-                            <a href="#" class="block text-sm font-semibold text-slate-800">
-                               @if ($peserta['peserta']['cob']['nmAsuransi']==null)
-                                   null
-                               @else
-                                   {{ $peserta['peserta']['cob']['nmAsuransi'] }}
-                               @endif
-                            </a>
-                            </td>
+                            </tr>
+                        @endforeach
+                         
+                            
                             
 
-                        </tr>
                        
                         </tbody>
                     </table>

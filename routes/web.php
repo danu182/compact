@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RujukanMultiController;
 use App\Http\Controllers\RujukanSingleController;
+use App\Http\Controllers\TempatTidurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+route::get('/dashboard',[TempatTidurController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -39,9 +43,12 @@ Route::middleware('auth')->group(function () {
     Route::get('rujukan/multi', [RujukanMultiController::class,'index'])->name('rujukan.multi.index');
     Route::post('rujukan/multi/proses', [RujukanMultiController::class,'proses'])->name('rujukan.multi.proses');
     
-    Route::get('rujukan/single', [RujukanSingleController::class,'index'])->name('rujukan.multi.index');
-    Route::post('rujukan/single/proses', [RujukanSingleController::class,'proses'])->name('rujukan.multi.proses');
+    Route::get('rujukan/multi', [RujukanSingleController::class,'index'])->name('rujukan.multi.index');
+    Route::post('rujukan/multi/proses', [RujukanSingleController::class,'proses'])->name('rujukan.multi.proses');
     
+    Route::get('rujukan/single', [RujukanSingleController::class,'index'])->name('rujukan.single.index');
+    Route::post('rujukan/single/proses', [RujukanSingleController::class,'proses'])->name('rujukan.single.proses');
+    // route::resource('tt',TempatTidurController::class);
 
 });
 
