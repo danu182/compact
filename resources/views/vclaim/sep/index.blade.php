@@ -32,19 +32,19 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __('cari Sep') }}
+                    {{ __('Jumlah Sep') }}
                 </h2>
 
                 <p class="mt-1 text-sm text-gray-600">
-                    {{ __('masukkan nomer SEP.') }}
+                    {{ __('masukkan nomer peserta dan nomer jenis rujukan.') }}
                 </p>
-                <form method="post" enctype="multipart/form-data" action="{{ route('sep.proses') }}" class="mt-6 space-y-6">
+                <form method="post" enctype="multipart/form-data" action="{{ route('jumlah.sep.proses') }}" class="mt-6 space-y-6">
                     @csrf
                     
 
                     {{-- asdasdas --}}
                     
-{{--                     
+                    
                      <div class="relative h-10 w-72 min-w-[200px]">
                         
                         <div class="relative">
@@ -55,7 +55,7 @@
                             </select>
                         </div>
                        
-                        </div> --}}
+                        </div>
 
                     
                     {{-- asdasdas --}}

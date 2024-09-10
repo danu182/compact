@@ -30,6 +30,18 @@
                     </x-nav-link>
                 </div>
 
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('rujukan.multi.index')" :active="request()->routeIs('rujukan.multi.index')">
+                        {{ __('Rujukan Multi') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('jumlah.sep.index')" :active="request()->routeIs('jumlah.sep.index')">
+                        {{ __('Jml Sep') }}
+                    </x-nav-link>
+                </div>
+
 
                
                 

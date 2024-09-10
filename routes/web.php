@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RujukanMultiController;
 use App\Http\Controllers\RujukanSingleController;
+use App\Http\Controllers\SepController;
 use App\Http\Controllers\TempatTidurController;
 
 /*
@@ -53,6 +54,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('jumlah/sep', [JmlSep::class,'index'])->name('jumlah.sep.index');
     Route::post('jumlah/sep', [JmlSep::class,'proses'])->name('jumlah.sep.proses');
+    
+    Route::get('sep', [SepController::class,'index'])->name('sep.index');
+    Route::post('sep', [SepController::class,'proses'])->name('sep.proses');
 
 
     
