@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\JmlSep;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,13 @@ Route::middleware('auth')->group(function () {
     
     Route::get('rujukan/single', [RujukanSingleController::class,'index'])->name('rujukan.single.index');
     Route::post('rujukan/single/proses', [RujukanSingleController::class,'proses'])->name('rujukan.single.proses');
+    
+    
+    Route::get('jumlah/sep', [JmlSep::class,'index'])->name('jumlah.sep.index');
+    Route::post('jumlah/sep', [JmlSep::class,'proses'])->name('jumlah.sep.proses');
+
+
+    
     // route::resource('tt',TempatTidurController::class);
 
 });

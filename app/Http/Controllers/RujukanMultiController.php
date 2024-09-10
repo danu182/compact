@@ -22,8 +22,8 @@ class RujukanMultiController extends Controller
         list($peserta, $hasil)= vClaim($alamat);
         // return $hasil;
         if($hasil['metaData']['code']=='200'){
-                return $peserta;
-                // return view('vclaim.rujukan_multi.hasil', compact('peserta'));
+                // return $peserta;
+                return view('vclaim.rujukan_multi.hasil', compact('peserta'));
         }else{
             return Redirect()->back()->withErrors(
                                 [

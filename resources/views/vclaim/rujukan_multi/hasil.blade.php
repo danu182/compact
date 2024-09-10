@@ -42,6 +42,11 @@
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
+                                tanggal kunjungan
+                            </p>
+                            </th>
+                            <th class="p-4 border-b border-slate-300 bg-slate-50">
+                            <p class="block text-sm font-normal leading-none text-slate-500">
                                 No kartu
                             </p>
                             </th>
@@ -52,12 +57,27 @@
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
+                                noMR
+                            </p>
+                            </th>
+                            <th class="p-4 border-b border-slate-300 bg-slate-50">
+                            <p class="block text-sm font-normal leading-none text-slate-500">
                                 Nama
                             </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
-                                kdProvider
+                                Status
+                            </p>
+                            </th>
+                            <th class="p-4 border-b border-slate-300 bg-slate-50">
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                Diagnosa
+                            </p>
+                            </th>
+                            <th class="p-4 border-b border-slate-300 bg-slate-50">
+                            <p class="block text-sm font-normal leading-none text-slate-500">
+                                Kode Provider
                             </p>
                             </th>
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
@@ -70,11 +90,7 @@
                                 umur pelayanan
                             </p>
                             </th>
-                            <th class="p-4 border-b border-slate-300 bg-slate-50">
-                            <p class="block text-sm font-normal leading-none text-slate-500">
-                                diagnosa
-                            </p>
-                            </th>
+                            
                             <th class="p-4 border-b border-slate-300 bg-slate-50">
                             <p class="block text-sm font-normal leading-none text-slate-500">
                                 poli rujukan
@@ -105,6 +121,11 @@
                                 </td>
                                 <td class="p-4 border-b border-slate-200">
                                 <p class="block text-sm text-slate-800">
+                                     {{ $pasien['tglKunjungan'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
                                      {{ $pasien['peserta']['noKartu'] }} 
                                 </p>
                                 </td>
@@ -115,7 +136,17 @@
                                 </td>
                                 <td class="p-4 border-b border-slate-200">
                                 <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['mr']['noMR'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
                                      {{ $pasien['peserta']['nama'] }} 
+                                </p>
+                                </td>
+                                <td class="p-4 border-b border-slate-200">
+                                <p class="block text-sm text-slate-800">
+                                     {{ $pasien['peserta']['statusPeserta']['keterangan'] }} 
                                 </p>
                                 </td>
                                 <td class="p-4 border-b border-slate-200">
