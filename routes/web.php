@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DataKunjunganController;
 use App\Http\Controllers\JmlSep;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
@@ -57,6 +58,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('sep', [SepController::class,'index'])->name('sep.index');
     Route::post('sep', [SepController::class,'proses'])->name('sep.proses');
+    
+    Route::get('data/kunjungan', [DataKunjunganController::class,'index'])->name('data.kunjungan.index');
+    Route::post('data/kunjungan', [DataKunjunganController::class,'proses'])->name('data.kunjungan.proses');
 
 
     

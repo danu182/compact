@@ -42,6 +42,12 @@
                     </x-nav-link>
                 </div>
 
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('data.kunjungan.index')" :active="request()->routeIs('data.kunjungan.index')">
+                        {{ __('Data Kunjungan') }}
+                    </x-nav-link>
+                </div>
+
 
                
                 
