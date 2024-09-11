@@ -48,6 +48,12 @@
                     </x-nav-link>
                 </div>
 
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('data.pelayanan.index')" :active="request()->routeIs('data.pelayanan.index')">
+                        {{ __('Data History pelayanan peserta') }}
+                    </x-nav-link>
+                </div>
+
 
                
                 
