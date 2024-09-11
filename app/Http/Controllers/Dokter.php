@@ -50,7 +50,7 @@ class Dokter extends Controller
         // return $peserta;
 
         if($hsl['metaData']['code']=='200'){
-                // return $dokter;
+                
                 return view('vclaim.dokter.hasil', compact('dokter'));
         }else{
             return Redirect()->back()->withErrors(

@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DataHistoriPelayananPesertaController;
 use App\Http\Controllers\DataKunjunganController;
 use App\Http\Controllers\Dokter;
+use App\Http\Controllers\IcareController;
 use App\Http\Controllers\JmlSep;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
@@ -69,6 +70,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('dokter', [Dokter::class,'index'])->name('dokter.index');
     Route::post('dokter', [Dokter::class,'proses'])->name('dokter.proses');
+    
+    Route::get('icare', [IcareController::class,'index'])->name('icare.index');
+    Route::post('icare', [IcareController::class,'proses'])->name('icare.proses');
 
     
     // route::resource('tt',TempatTidurController::class);
