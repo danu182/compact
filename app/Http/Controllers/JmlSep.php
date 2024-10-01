@@ -31,6 +31,8 @@ class JmlSep extends Controller
         $parameter2=$request->nomor;
         
         $alamat="Rujukan/JumlahSEP/".$parameter1."/".$parameter2;
+
+        // return $alamat;
         
         list($peserta, $hasil)= vClaim($alamat);
         // return $hasil;

@@ -41,6 +41,7 @@
                             <td class="border p-2">{{ $contact->name }}</td>
                             <td class="border p-2 flex justify-center">
                                 <img src="{{ Storage::url($contact->avatar) }}" class="h-32 w-32" />
+                                {{-- <img src="{{ asset('/storage/public/'.$contact->avatar }}" class="h-32 w-32" /> --}}
                             </td>
                             <td class="border p-2">{{ $contact->phone_number }}</td>
                             <td class="border p-2">{{ $contact->gender }}</td>
