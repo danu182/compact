@@ -33,7 +33,6 @@ function Antrean($alamat)
         ];
    
             $url= env('baseurlAntrian').$alamat;
-            return $url;
             $hasil =Http::withHeaders(
                 $headers
             )->get($url);
