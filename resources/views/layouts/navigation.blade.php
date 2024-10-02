@@ -31,6 +31,12 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('antrean.pendaftaran.tanggal.index')" :active="request()->routeIs('antrean.pendaftaran.tanggal.index')">
+                        {{ __('Antrian Per Tanggal') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('rujukan.multi.index')" :active="request()->routeIs('rujukan.multi.index')">
                         {{ __('Rujukan Multi') }}
                     </x-nav-link>

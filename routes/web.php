@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AntreanController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DataHistoriPelayananPesertaController;
 use App\Http\Controllers\DataKunjunganController;
@@ -73,6 +74,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('icare', [IcareController::class,'index'])->name('icare.index');
     Route::post('icare', [IcareController::class,'proses'])->name('icare.proses');
+    
+    Route::get('antrean/pendaftaran', [AntreanController::class,'index'])->name('antrean.pendaftaran.tanggal.index');
+    Route::post('antrean/pendaftaran/tanggal', [AntreanController::class,'proses'])->name('antrean.pendaftaran.tanggal.proses');
 
     
     // route::resource('tt',TempatTidurController::class);

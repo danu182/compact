@@ -84,8 +84,8 @@
                                         {{ $item['namaruang'] }}
                                     </p>
                                     </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                    <p class="block text-sm text-slate-800">
+                                    <td class="p-4 border-b border-slate-200 text-centre">
+                                    <p class="block text-sm text-slate-800 " >
                                         {{ $item['kodekelas'] }}
                                     </p>
                                     </td>
@@ -99,19 +99,19 @@
                                         {{ $item['koderuang'] }}
                                     </p>
                                     </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                    <p class="block text-sm text-slate-800">
+                                    <td class="p-4 border-b border-slate-200 ">
+                                    <p class="block text-sm text-slate-800 text-xl">
                                         {{ $item['kapasitas'] }}
                                     </p>
                                     </td>
                                     <td class="p-4 border-b border-slate-200">
                                         {{-- {{ $item['tersedia'] }} --}}
                                         @if ($item['tersedia']==0)
-                                        <p class="block text-sm text-red-500 font-bold bg-cyan-50">
+                                        <p class="block text-sm text-red-500 text-xl font-bold bg-cyan-50">
                                             {{ $item['tersedia'] }}
                                         </p>
                                         @else
-                                        <p class="block text-sm text-teal-700	 font-bold">
+                                        <p class="block text-sm text-teal-700 text-xl	 font-bold">
                                             {{ $item['tersedia'] }}
                                         </p>
                                             

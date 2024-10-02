@@ -10,7 +10,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __('jumlah SEp pr nomer rujukan') }}
+                    {{ __('jumlah SEP per nomer rujukan') }}
                 </h2>
 
                 {{-- <p class="mt-1 mb-2 text-sm text-gray-600">
@@ -30,7 +30,7 @@
                  <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border">
                     
                     <label class="block mb-1 text-sm text-slate-800">
-                            nomer rujukan {{ $parameter2 }} baru di Dipakai untuk sep sebanyak {{ $peserta['jumlahSEP']  }} kali 
+                            nomer rujukan {{ $parameter2 }} baru dipakai untuk sep sebanyak {{ $peserta['jumlahSEP']  }} kali 
                         </label>
                     
                 </div>
