@@ -14,6 +14,47 @@ function formatDate($dateString, $format = 'Y-m-d')
 }
 
 
+function getToken()
+{
+
+    $alamat="https://antri.rssuciparamita.com/api/BpjsAntrol/GetToken";
+    $user= env('userToken');
+    $pass= env('passToken');
+
+    $headers=[
+        'x-username'=>$user,
+        'x-password'=>$pass,
+    ];
+
+    $token =Http::withHeaders(
+                $headers
+            )->get($alamat);
+
+            return $token['response']['token'];
+}
+
+function getJadwalOperasi($tanggal)
+{
+    try {
+    $token= getToken();
+    $headers=[
+        'x-token'=> $token,
+        'x-username'=> env('userToken')
+    ];
+    
+    $url=env('baseUrlJadwalOperasi');
+    $jadwal=  Http::withHeaders($headers)
+            ->withBody(json_encode($tanggal), 'application/json')
+            ->post($url);
+            $data=$jadwal['response']['list'];
+            return [$data, $jadwal];
+    }catch(\Exception $e)
+    {
+        return "eroor dari WS Antrian";
+    }
+}
+
+
 function Antrean($alamat)
 {
     try{

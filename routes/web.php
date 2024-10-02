@@ -6,6 +6,7 @@ use App\Http\Controllers\DataHistoriPelayananPesertaController;
 use App\Http\Controllers\DataKunjunganController;
 use App\Http\Controllers\Dokter;
 use App\Http\Controllers\IcareController;
+use App\Http\Controllers\JadwalOperasiController;
 use App\Http\Controllers\JmlSep;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProfileController;
@@ -77,6 +78,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('antrean/pendaftaran', [AntreanController::class,'index'])->name('antrean.pendaftaran.tanggal.index');
     Route::post('antrean/pendaftaran/tanggal', [AntreanController::class,'proses'])->name('antrean.pendaftaran.tanggal.proses');
+    
+    Route::get('jadwal/operasi', [JadwalOperasiController::class,'index'])->name('jadwal.operasi.index');
+    Route::post('jadwal/operasi', [JadwalOperasiController::class,'proses'])->name('jadwal.operasi.proses');
 
     
     // route::resource('tt',TempatTidurController::class);
