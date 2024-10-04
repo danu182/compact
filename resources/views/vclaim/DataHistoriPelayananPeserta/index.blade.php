@@ -36,7 +36,7 @@
                 </h2>
 
                 <p class="mt-1 text-sm text-gray-600">
-                    {{ __('masukkan nomer SEP.') }}
+                    {{ __('masukkan nomer SEP. untuk rentang waktu hanya bisa 90 hari dari inputan tanggal akhir di bawah') }}
                 </p>
                 <form method="post" enctype="multipart/form-data" action="{{ route('data.pelayanan.proses') }}" class="mt-6 space-y-6">
                     @csrf
@@ -61,7 +61,7 @@
                         <x-input-label for="nomor" :value="__('nomor kartu')"/>
                         <x-text-input id="nomor" name="nomor" type="text"
                                       class="mt-1 block w-full" placeholder="nomor"/>
-                        <x-input-error :messages="$errors->get('nomor1')" class="mt-2"/>
+                        <x-input-error :messages="$errors->get('nomor')" class="mt-2"/>
                     </div>
                      <div>
                         <x-input-label for="tanggal mulai" :value="__('Tanggal awal')"/>

@@ -17,9 +17,9 @@
                     {{ __('Here is your antrian list tanggal '. $tanggal) }}
                 </p>
                 <div class="flex justify-between items-center">
-                    <form action="" method="get">
-                        <input type="text" name="search" class="border border-gray-300 shadow  rounded p-3" placeholder="Cari data..." value="{{ request('search') }}">
-                    </form>
+                        {{-- <form action="" method="get">
+                            <input type="text" name="search" class="border border-gray-300 shadow  rounded p-3" placeholder="Cari data..." value="{{ request('search') }}">
+                        </form> --}}
                     {{-- <a href="{{ route('contacts.create') }}"
                     class="px-4 py-3 bg-blue-700  my-2 ring-indigo-300 border  text-white">Create
                         Pesera</a> --}}

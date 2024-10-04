@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-
 use function App\Helpers\formatDate;
 use function App\Helpers\vClaim;
 
@@ -17,10 +17,27 @@ class DataHistoriPelayananPesertaController extends Controller
 
     public function proses(Request $request)
     {
-        $parameter1 =$request->nomor;
-        $parameter2 = formatDate($request->tanggal1);
-        $parameter3 = formatDate($request->tanggal2);
 
+
+         $validatedData = $request->validate([
+            'nomor' => 'required|numeric',
+        ]);
+
+        // return $validatedData;
+
+        $parameter3 = formatDate($request->tanggal2);
+        // $today = Carbon::now();
+        $tanggalCarbon = Carbon::parse($parameter3);
+
+        // Mengurangi 90 hari
+        $ninetyDaysAgo = $tanggalCarbon->subDays(90);
+
+        // Memformat tanggal sesuai keinginan (misal: d-m-Y)
+        $formattedDate = $ninetyDaysAgo->format('Y-m-d');
+        
+        $parameter1 =$validatedData['nomor'];
+            $parameter2 = formatDate($formattedDate);
+        
         $alamat="monitoring/HistoriPelayanan/NoKartu/".$parameter1."/tglMulai/".$parameter2."/tglAkhir/".$parameter3;
         // return $alamat;
 
@@ -28,7 +45,7 @@ class DataHistoriPelayananPesertaController extends Controller
         // return $hasil;
         if($hasil['metaData']['code']=='200'){
                 // return $peserta;
-                return view('vclaim.DataHistoriPelayananPeserta.hasil', compact('peserta', 'parameter1'));
+                return view('vclaim.DataHistoriPelayananPeserta.hasil', compact('peserta', 'parameter1','parameter2','parameter3'));
         }else{
             return Redirect()->back()->withErrors(
                                 [

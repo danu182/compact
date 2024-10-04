@@ -45,7 +45,7 @@
                     <div>
                         <x-input-label for="tanggal" :value="__('Tanggal')"/>
                         <x-text-input id="tanggal" name="tanggal" type="date"
-                                      class="mt-1 block w-full" placeholder="Your nomor"/>
+                                      class="mt-1 block w-full" placeholder="isi Tanggal"/>
                         <x-input-error :messages="$errors->get('tanggal')" class="mt-2"/>
                     </div>
                     
