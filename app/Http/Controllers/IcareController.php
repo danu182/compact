@@ -40,10 +40,15 @@ class IcareController extends Controller
     
     public function proses(Request $request) 
     {
-        $arr=[
-            "param"=>$request->nomor,
-            "kodedokter"=> (int)$request->dokter
 
+
+        $validatedData = $request->validate([
+            'nomor' => 'required|numeric|min:13',
+        ]);
+
+        $arr=[
+            "param"=>$validatedData['nomor'],
+            "kodedokter"=> (int)$request->dokter
         ];
 
         $nomorBpjs=$arr['param'];

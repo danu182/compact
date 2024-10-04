@@ -64,9 +64,9 @@
 
                    
                     <div>
-                        <x-input-label for="nomor" :value="__('Nomor')"/>
+                        <x-input-label for="nomor" :value="__('Nomor KTP atau Nomor Peserta BPJS')"/>
                         <x-text-input id="nomor" name="nomor" type="text"
-                                      class="mt-1 block w-full" placeholder="Your nomor"/>
+                                      class="mt-1 block w-full" placeholder="masukkan nomor peserta bpjs atau nomer ktp nya"/>
                         <x-input-error :messages="$errors->get('nomor')" class="mt-2"/>
                     </div>
                     
