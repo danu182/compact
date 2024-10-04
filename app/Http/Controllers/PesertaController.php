@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Monolog\Handler\IFTTTHandler;
 
@@ -21,9 +22,13 @@ class PesertaController extends Controller
 
     public function proses(Request $request )
     {
+
+        $validatedData = $request->validate([
+            'nomor' => 'required|numeric',
+        ]);
         // return view('vclaim.peserta.hasil');
 
-        $parameter1=$request->nomor;
+        $parameter1=$validatedData['nomor'];
         $parameter2= formatDate($request->tanggal1);
         $nilai=$request->nilai;
 
@@ -34,9 +39,12 @@ class PesertaController extends Controller
         }
 
         list($peserta, $hsl)= vClaim($alamat);
+
+        // dd($peserta);
         if($hsl['metaData']['code']=='200'){
                 // return $peserta;
                 return view('vclaim.peserta.hasil', compact('peserta'));
+                // return view('vclaim.peserta.cobaTab ', compact('peserta'));
         }else{
             return Redirect()->back()->withErrors(
                                 [
