@@ -87,9 +87,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                            
-                            @foreach ($data as $pasien)
-                            <tr class="hover:bg-slate-50">
+
+                            @forelse ($data as $pasien)
+                                <tr class="hover:bg-slate-50">
                             
                                 <td class="p-4 border-b border-slate-200">
                                 <p class="block text-sm text-slate-800">
@@ -144,8 +144,11 @@
                                 
                                
                             </tr>
-                        @endforeach
-                         
+                            @empty
+                                <tr class="text-center">
+                                    <td class="text-red-500">Data tidak ada jadwal</td>
+                                </tr>
+                            @endforelse
                             
                             
 

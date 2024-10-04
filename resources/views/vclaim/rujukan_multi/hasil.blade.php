@@ -16,14 +16,14 @@
                 <p class="mt-1 mb-2 text-sm text-gray-600">
                     {{ __('Here is your rujukan list.') }}
                 </p>
-                <div class="flex justify-between items-center">
+                {{-- <div class="flex justify-between items-center">
                     <form action="" method="get">
                         <input type="text" name="search" class="border border-gray-300 shadow  rounded p-3" placeholder="Cari data..." value="{{ request('search') }}">
                     </form>
-                    {{-- <a href="{{ route('contacts.create') }}"
+                    <a href="{{ route('contacts.create') }}"
                     class="px-4 py-3 bg-blue-700  my-2 ring-indigo-300 border  text-white">Create
-                        Pesera</a> --}}
-                </div>
+                        Pesera</a>
+                </div> --}}
                 
                 {{-- table --}}
                  <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border">

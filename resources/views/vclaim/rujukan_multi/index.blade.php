@@ -67,7 +67,7 @@
 
                    
                     <div>
-                        <x-input-label for="nomor" :value="__('Nomor')"/>
+                        <x-input-label for="nomor" :value="__('Nomor BPJS Peserta')"/>
                         <x-text-input id="nomor" name="nomor" type="text"
                                       class="mt-1 block w-full" placeholder="Your nomor"/>
                         <x-input-error :messages="$errors->get('nomor')" class="mt-2"/>

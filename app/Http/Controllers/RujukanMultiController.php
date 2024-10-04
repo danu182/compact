@@ -16,7 +16,12 @@ class RujukanMultiController extends Controller
 
     public function proses(Request $request)
     {
-        $parameter1=$request->nomor;
+
+        $validatedData = $request->validate([
+            'nomor' => 'required',
+        ]);
+        $parameter1=$validatedData['nomor'];
+
         $alamat="Rujukan/RS/List/Peserta/".$parameter1;
         
         list($peserta, $hasil)= vClaim($alamat);

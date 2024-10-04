@@ -16,7 +16,10 @@ class RujukanSingleController extends Controller
 
     public function proses(Request $request)
     {
-        $parameter1=$request->nomor;
+        $validatedData = $request->validate([
+            'nomor' => 'required|numeric',
+        ]);
+        $parameter1=$validatedData['nomor'];
         $nilai=$request->nilai;
         
         if($nilai==0){
