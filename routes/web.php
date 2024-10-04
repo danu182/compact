@@ -4,6 +4,7 @@ use App\Http\Controllers\AntreanController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DataHistoriPelayananPesertaController;
 use App\Http\Controllers\DataKunjunganController;
+use App\Http\Controllers\DataNomorSuratKontrolController;
 use App\Http\Controllers\Dokter;
 use App\Http\Controllers\IcareController;
 use App\Http\Controllers\JadwalOperasiController;
@@ -81,6 +82,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('jadwal/operasi', [JadwalOperasiController::class,'index'])->name('jadwal.operasi.index');
     Route::post('jadwal/operasi', [JadwalOperasiController::class,'proses'])->name('jadwal.operasi.proses');
+    
+    Route::get('surat/kontrol', [DataNomorSuratKontrolController::class,'index'])->name('data.surat.kontrol.index');
+    Route::post('surat/kontrol', [DataNomorSuratKontrolController::class,'proses'])->name('data.surat.kontrol.proses');
 
     
     // route::resource('tt',TempatTidurController::class);
