@@ -32,11 +32,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <h2 class="text-lg font-medium text-gray-900">
-                    {{ __('cari Sep') }}
+                    {{ __('cari jumlah Sep berdasarkan nomor rujukan') }}
                 </h2>
 
                 <p class="mt-1 text-sm text-gray-600">
-                    {{ __('masukkan nomer SEP.') }}
+                    {{ __('masukkan nomer Rujukan.') }}
                 </p>
                 <form method="post" enctype="multipart/form-data" action="{{ route('jumlah.sep.proses') }}" class="mt-6 space-y-6">
                     @csrf
@@ -55,9 +55,9 @@
 
 
                     <div>
-                        <x-input-label for="nomor" :value="__('Nomor')"/>
+                        <x-input-label for="nomor" :value="__('Nomor Rujukan')"/>
                         <x-text-input id="nomor" name="nomor" type="text"
-                                      class="mt-1 block w-full" placeholder="Your nomor"/>
+                                      class="mt-1 block w-full" placeholder="masukkan nomor rujukan"/>
                         <x-input-error :messages="$errors->get('nomor')" class="mt-2"/>
                     </div>
                     

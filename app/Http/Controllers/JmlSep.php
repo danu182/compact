@@ -26,9 +26,13 @@ class JmlSep extends Controller
 
     public function proses(Request $request)
     {
-        // return $request->all();
+        $validatedData = $request->validate([
+        // 'nomor' => 'required|alpha_num|min:19|max:19',
+        'nomor' => 'required|min:19|max:19',
+    ]);
+
         $parameter1=$request->nilai;
-        $parameter2=$request->nomor;
+        $parameter2=$validatedData['nomor'];
         
         $alamat="Rujukan/JumlahSEP/".$parameter1."/".$parameter2;
 
@@ -47,7 +51,7 @@ class JmlSep extends Controller
                                         'pesan dari bpjs',
                                         $hasil['metaData']['code'],
                                         $hasil['metaData']['message'],
-                                        $hasil['response']?:'null',                    
+                                        // $hasil['response']?:'null',                    
                                             ]                            
                                 ]);
 
