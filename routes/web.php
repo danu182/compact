@@ -85,7 +85,9 @@ Route::middleware('auth')->group(function () {
     
     Route::get('surat/kontrol', [DataNomorSuratKontrolController::class,'index'])->name('data.surat.kontrol.index');
     Route::post('surat/kontrol', [DataNomorSuratKontrolController::class,'proses'])->name('data.surat.kontrol.proses');
-
+    
+    Route::get('surat/kontrol/byNoKa', [DataNomorSuratKontrolController::class,'surKonByNoKa'])->name('data.surat.kontrol.byNoKa');
+    Route::post('surat/kontrol/byNoKa', [DataNomorSuratKontrolController::class,'surKonByNoKaProses'])->name('data.surat.kontrol.byNoKa.proses');
     
     // route::resource('tt',TempatTidurController::class);
 

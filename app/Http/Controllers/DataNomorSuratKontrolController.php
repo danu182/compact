@@ -63,4 +63,64 @@ public function proses(Request $request)
     }
 }
 
+
+public function surKonByNoKa()
+{
+    $judul="surat kontrol";
+    return view('vclaim.suratKontrol.indexSurKonByNoKa');
+}
+
+public function surKonByNoKaProses(Request $request)
+{
+    $validatedData = $request->validate([
+        'Parameter1' =>'required|numeric',
+        'Parameter2'=>'required|numeric',
+        'Parameter3'=>'required',
+        'Parameter4'=>'required|numeric',
+    ]);
+
+    $parameter1 = ($validatedData['Parameter1']);
+    $parameter2 = ($validatedData['Parameter2']);
+    $parameter3 = ($validatedData['Parameter3']);
+    $parameter4 = ($validatedData['Parameter4']);
+    
+    // $parameter1 = formatDate($validatedData['tanggalAwal']);
+    // $parameter2 = formatDate($validatedData['tanggalAkhir']);
+    // $parameter3 = $request->Parameter1;
+
+
+    
+    // $alamat="RencanaKontrol/ListRencanaKontrol/tglAwal/".$parameter1."/tglAkhir/".$parameter1."/filter/".$parameter3;
+
+    $alamat= "RencanaKontrol/ListRencanaKontrol/Bulan/". $parameter1 ."/Tahun/". $parameter2 . "/Nokartu/". $parameter3 . "/filter/". $parameter4;
+
+    // return $alamat;
+    list($surkon, $hsl)= vClaim($alamat);
+    
+    // return $surkon;
+    if($hsl['metaData']['code']=='200'){
+            // dd($surkon);
+            return view('vclaim.suratKontrol.hasilByNoKa', compact('surkon'));
+    }else{
+        return Redirect()->back()->withErrors(
+                            [
+                                'mgs' => [
+                                    'tanggal awal = '.$parameter1,
+                                    'tanggal akhir = '.$parameter2,
+                                    'berdawarkan = '.$parameter2,
+                                    'pesan dari bpjs',
+                                    $hsl['metaData']['code'],
+                                    $hsl['metaData']['message'],
+                                    $hsl['response']?:'null',                    
+                                        ]                            
+                            ]);
+
+    }
+}
+
+
+
+
+
+
 }

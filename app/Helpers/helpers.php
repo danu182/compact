@@ -139,7 +139,7 @@ function vClaim($alamat)
             $hasil =Http::withHeaders(
                 $headers
             )->get($url);
-            // return $hasil;
+            // dd($hasil) ;
             $mama=$hasil["response"];
 
                 $encrypt_method = 'AES-256-CBC';

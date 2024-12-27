@@ -10,7 +10,7 @@ class SepController extends Controller
 {
      public function index()
     {
-        return view('vclaim.jmlSep.index');
+        return view('vclaim.sep.index');
     }
 
    

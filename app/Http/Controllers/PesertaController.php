@@ -40,7 +40,7 @@ class PesertaController extends Controller
 
         list($peserta, $hsl)= vClaim($alamat);
 
-        // dd($peserta);
+        // dd($hsl);
         if($hsl['metaData']['code']=='200'){
                 // return $peserta;
                 return view('vclaim.peserta.hasil', compact('peserta'));
